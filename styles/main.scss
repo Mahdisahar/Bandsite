@@ -1,0 +1,95 @@
+@use './partial/typography' as *;
+
+* {
+	font-family: 'Avenir', sans-serif;
+}
+
+// HEADER FOR DESKTOP & TABLET
+$header-size: 2.5rem;
+$header-height: 2.8rem;
+$header-weight: Bold 700;
+
+// SECTION 
+$section-size: 1.5rem;
+$section-height: 1.8rem;
+$section-weight: 700;
+
+// SUBHEADER
+$subheader-size: 1rem;
+$subheader-height:1.3rem;
+$subheader-weight:Demi 600;
+
+// BODY 
+$body-size: 0.6rem;
+$body-height: 0.9rem;
+$body-weight: Regular 400;
+
+// FOOTER 
+// $footer-size: same as body size
+$footer-height:0.8rem;
+$footer-weight: Regular 400;
+
+// LABELS AND BUTTONS
+$label-size: 0.5rem;
+// $label-height: same as footer height;
+$label-weight: Bold 700;
+
+
+// FOR MOBILE TEXT
+// header
+// $header-mob-size: same as $subheader-size
+//$header-mob-height: same as $subheader-height
+// $header-mob-weight:same as $header-weight;
+
+
+// SECTION
+// $section-mob-head: same as $subheader-size
+// $section-mob-height: same as $subheader-height
+// $section-mob-weight:same as $header-weight
+
+// SUBHEADER
+// $font-size same as $body-size
+//$font-height: same as $body-height
+// $font-weight: same as $subheader-weight
+
+// BODY 
+$body-mob-size: 0.5rem; 
+$body-mob-height: 0.75rem;
+// weight same as $body-weight;
+
+// FOOTER 
+// size same as $body-mob-size
+// height and weight same as $body-mob-height: 0.75rem;
+// weight same as $body-weight;
+
+
+// BUTTON 
+$btn-size: 0.4rem;
+// height same as $footer-height
+// height same as $header-weight
+
+
+// COLORS 
+$primary-color-black: #323232;
+$primary-color-silver: #AFAFAF;
+$primary-color-white: #FFFFFF;
+
+
+$secondary-color-black: #000000;
+$secondary-color-mercury: #E1E1E1;
+$secondary-color-albaster: #FAFAFA;
+
+
+// Desktop:1280px
+// tablet: 768px
+// mobile:320px
+
+// PADDING:
+$padding: 0.3rem;
+$padding-before: 2rem;
+$padding-after: 1.5rem;
+$padding-between: 1.5rem;
+
+// mob
+$mob-padding: 1rem;
+$mob-after: 0.6rem;

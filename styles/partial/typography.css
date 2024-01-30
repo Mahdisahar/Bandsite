@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Avenir";
+  font-style: bold;
+  font-weight: 700;
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: Regular;
+  font-weight: 400;
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: Demi;
+  font-weight: 600;
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf");
+}/*# sourceMappingURL=typography.css.map */
