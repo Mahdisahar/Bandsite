@@ -1,0 +1,52 @@
+.nav {
+	background-color: $primary-color;
+	min-height: 6rem;
+	padding: $padding;
+  
+	&__container {
+	  text-align: center;
+	  margin: $mob-padding;
+  
+	  @include tablet {
+		display: flex;
+		align-items: center;
+		padding: 1.5rem;
+	  }
+	}
+	&__logo {
+	  color: $primary-color-white;
+	  text-decoration: none;
+  
+	  @include tablet {
+		font-size: $header-size;
+		margin-left: 4rem;
+		line-height: $header-height;
+	  }
+	}
+	&__list {
+	  display: flex;
+	  list-style: none;
+	  justify-content: space-around;
+	  padding-top: $padding-after;
+  
+	  @include tablet {
+		padding-left: 4rem;
+		padding-top: 0;
+	  }
+  
+	  &--item {
+		color: $primary-color-white;
+		text-decoration: none;
+		&:hover {
+		  border-bottom: 4px solid $primary-color-white;
+	  
+		}
+  
+		@include tablet {
+		  margin-left: 4rem;
+		  font-size: $section-size;
+		}
+	  }
+	}
+  }
+  
