@@ -35,3 +35,33 @@
       }
 }
 
+
+//  MUSICIANS SECTION 
+.musicians {
+	padding: 1.5rem 0;
+
+ &__container {
+	height: 20rem;
+
+	&--title {
+
+		padding-left: 1rem;
+		color: $primary-color ;
+	}
+
+	&--img {
+		padding: 1rem;
+		width: 20rem;
+		height: 10rem;
+	}
+ }
+
+.musicians--para, .musicians--para2   {
+	padding-left: 1rem;
+	color: $primary-color ;
+	line-height: $section-height;
+ }
+
+
+
+}
