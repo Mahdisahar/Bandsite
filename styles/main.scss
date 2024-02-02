@@ -2,17 +2,13 @@
 @use './partial/variables' as *;
 @use './partial/global' as *;
 
-// for LOGO AND NAVBAR SECTION I added in seperate file called _nav.scss file
-@import './partial/nav';
-
 // HERO SECTION 
 .hero {
 	min-height: 15rem;
-	// background:linear-gradient to left (rgba(5, 5, 5, 0.2), rgba(0,0,0,0.3)), url('../assets/Images/hero-bio.jpg');
-	background: url('../assets/Images/hero-bio.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+    url(../assets/images/hero-bio.jpg);
 	background-position: center;
 	background-size: cover;
-	// opacity: 80%;
 
 	@include tablet {
 		height: 28rem;

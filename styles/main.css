@@ -1,19 +1,13 @@
 @font-face {
   font-family: "Avenir";
-  font-style: bold;
-  font-weight: 700;
   src: url("../../assets/Font/extra/AvenirNextLTPro-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Avenir";
-  font-style: Regular;
-  font-weight: 400;
   src: url("../../assets/Font/extra/AvenirNextLTPro-Regular.woff2") format "woff2";
 }
 @font-face {
   font-family: "Avenir";
-  font-style: Demi;
-  font-weight: 600;
   src: url("../../assets/Font/extra/AvenirNextLTPro-Demi.woff2") format("woff2");
 }
 * {
@@ -42,6 +36,8 @@
 .nav__logo {
   color: #FFFFFF;
   text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .nav__logo {
@@ -62,15 +58,15 @@
     padding-top: 0;
   }
 }
-.nav__list--item {
+.nav .nav__list-item {
   color: #FFFFFF;
   text-decoration: none;
 }
-.nav__list--item:hover {
+.nav .nav__list-item:hover {
   border-bottom: 4px solid #FFFFFF;
 }
 @media (min-width: 768px) {
-  .nav__list--item {
+  .nav .nav__list-item {
     margin-left: 4rem;
     font-size: 1.5rem;
   }
@@ -78,7 +74,7 @@
 
 .hero {
   min-height: 15rem;
-  background: url("../assets/Images/hero-bio.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
 }
