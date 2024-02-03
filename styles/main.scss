@@ -2,66 +2,210 @@
 @use './partial/variables' as *;
 @use './partial/global' as *;
 
-// HERO SECTION 
+// HERO SECTION
 .hero {
-	min-height: 15rem;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+  min-height: 15rem;
+  background-image: linear-gradient(
+      rgba(33, 33, 33, 0.8),
+      rgba(62, 62, 62, 0.3)
+    ),
     url(../assets/images/hero-bio.jpg);
-	background-position: center;
-	background-size: cover;
+  background-position: center;
+  background-size: cover;
 
+  @include tablet {
+    height: 28rem;
+  }
+  @include desktop {
+    min-height: 55rem;
+  }
+
+  &__title {
+    color: $primary-color-white;
+    padding: 5rem 2rem;
+
+    @include tablet {
+      padding: 10rem 2rem;
+      font-size: 4rem;
+    }
+    @include desktop {
+      min-height: 40rem;
+      padding: 20rem 10rem;
+      font-size: 6rem;
+    }
+  }
+  @include tablet {
+    font-size: $section-size;
+  }
+}
+
+//  MUSICIANS SECTION
+.musicians {
+  padding: 1.5rem 0;
+
+  &--title {
+    padding-left: 1rem;
+    color: $primary-color;
+
+    @include tablet {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+
+	@include desktop{
+		padding-left: 5rem;
+	  }
+  }
+
+  &__container {
+    @include tablet {
+      text-align: center;
+    }
+
+    &--img {
+      padding: 1rem;
+      width: 20rem;
+      height: 10rem;
+
+      @include tablet {
+        width: 40rem;
+        height: 25rem;
+      }
+      @include desktop {
+        width: 60rem;
+        height: 35rem;
+      }
+    }
+  }
+
+  .musicians--para,
+  .musicians--para2 {
+    padding-left: 1rem;
+    color: $primary-color;
+    line-height: $section-height;
+
+    @include tablet {
+      width: 45rem;
+      text-align: left;
+      font-size: $section-size;
+      line-height: $section-height;
+      padding-left: 5rem;
+    }
+    @include desktop {
+      width: 60rem;
+      // text-align: left;
+      // font-size: $section-size;
+      // line-height:$section-height;
+      padding: 1rem 0 0 11rem;
+    }
+  }
+  .musicians--para2 {
+    @include tablet {
+      padding-top: 2rem;
+      font-size: $subheader-size;
+    }
+  }
+}
+
+// THE BEE KNEES SECTION
+.bee {
+  padding: 2rem 1rem 1rem 1rem;
+  min-height: 20rem;
+
+  &__title {
+    padding-bottom: $mob-padding;
+    color: $secondary-color-black;
+    @include tablet {
+      padding-left: 4rem;
+    }
+
+    @include desktop {
+      padding-left: 10rem;
+    }
+  }
+  &__subtitle {
+    padding-bottom: $padding-after;
+  }
+
+  &__list {
+    list-style: none;
+    @include tablet {
+      display: flex;
+      padding: 0 4rem;
+      line-height: 1.6rem;
+    }
+    @include desktop {
+      width: 70rem;
+      margin: 0 auto;
+      // padding: 0 2rem;
+    }
+
+    &--item {
+      // padding-bottom: 1rem;
+      color: $primary-color;
+
+      margin: 0 auto;
+      @include tablet {
+        width: 25rem;
+      }
+    }
+  }
+}
+
+// GALLERY SECTION
+.gallery {
+  background-color: $secondary-color-albaster;
+
+  &__container {
 	@include tablet {
-		height: 28rem;
-      }
-	  @include desktop {
-		min-height: 40rem;
-      }
-	
-	&__title {
-		color: $primary-color-white;
-		padding: 5rem 2rem;
-
-		@include tablet {
-			padding: 10rem 4rem;
-		  }
-		  @include desktop {
-			min-height: 40rem;
-			font-size: header-size;
-			padding: 15rem 6rem;
-		  }
+		padding: 1.5rem;
 	}
-	@include tablet {
-		font-size: $section-size;
-      }
+	@include desktop {
+		// padding: 6rem;
+	}
+  }
+  &__title {
+    color: $primary-color;
+    font-size: $section-size;
+    padding: 2rem 0 0 1rem;
+
+    @include tablet {
+    font-size:$header-size ;
+    }
+	@include desktop{
+		padding-left: 3rem;
+	  }
+  }
+  &__img {
+    @include tablet {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include desktop {
+		padding: 2rem;
+	}
+	
+    &--photo {
+      width: 20rem;
+      height: 10rem;
+	  padding: 0.5rem 1rem;
+
+	  @include tablet {
+		width: 15rem;
+		padding: 1rem 0.5rem;
+	  }
+	  @include desktop {
+		width: 25rem;
+		height: 15rem;
+	  }
+
+    }
+  }
 }
 
 
-//  MUSICIANS SECTION 
-.musicians {
-	padding: 1.5rem 0;
-
- &__container {
+// FOOTER SECTION 
+.footer {
+	background-color: $primary-color;
 	height: 20rem;
-
-	&--title {
-
-		padding-left: 1rem;
-		color: $primary-color ;
-	}
-
-	&--img {
-		padding: 1rem;
-		width: 20rem;
-		height: 10rem;
-	}
- }
-
-.musicians--para, .musicians--para2   {
-	padding-left: 1rem;
-	color: $primary-color ;
-	line-height: $section-height;
- }
-
-
-
 }
