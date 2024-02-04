@@ -65,6 +65,10 @@
       padding: 1rem;
       width: 20rem;
       height: 10rem;
+	  transition: transform 1s ease-in-out ;
+	  &:hover {
+		transform: scale(1.05);
+	  }
 
       @include tablet {
         width: 40rem;
@@ -177,6 +181,7 @@
     @include tablet {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+		
 	}
 	@include desktop {
 		padding: 2rem;
@@ -186,6 +191,10 @@
       width: 20rem;
       height: 10rem;
 	  padding: 0.5rem 1rem;
+	  transition: transform 1s ease-in-out ;
+		&:hover {
+		  transform: scale(1.05);
+		}
 
 	  @include tablet {
 		width: 15rem;
@@ -201,8 +210,3 @@
 }
 
 
-// FOOTER SECTION 
-.footer {
-	background-color: $primary-color;
-	height: 20rem;
-}

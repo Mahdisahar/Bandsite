@@ -77,3 +77,85 @@ $desktop-breakpoint: 1280px;
     }
   }
 }
+
+// FOOTER SECTION
+.footer {
+  color: $primary-color-white;
+  margin-top: 0.5rem;
+  padding: 2.5rem 1rem;
+  background-color: $primary-color;
+  @include desktop {
+	padding: 2.5rem 5rem;
+  }
+
+  &__manage {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__touch {
+    @include tablet {
+      display: flex;
+    }
+
+    &--title {
+      padding-bottom: 1rem;
+      font-size: $section-size;
+
+      @include tablet {
+        padding: 0 4rem 2rem 0;
+        font-size: $header-size;
+      }
+    }
+    &--img {
+      padding-right: 2rem;
+      @include tablet {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  &__address {
+    padding: 1rem 0;
+
+    @include tablet {
+      width: 100%;
+    }
+	@include desktop {
+		width: 25%;
+	  }
+
+    &--title,
+    &--para2 {
+      font-size: 1rem;
+      padding-bottom: $padding-after;
+    }
+
+    &--para2,
+    &--email {
+      font-size: $body-mob-size;
+    }
+  }
+
+  &__band {
+    padding: 2rem 0 0 0;
+	position: relative;
+	&--img {
+		@include tablet {
+			display: flex;
+			flex-direction:row-reverse;
+			position: absolute;
+			bottom: 17.5rem;
+			right: 2rem;
+	 
+		}
+	}
+ 
+
+    &--para1 {
+      padding-top: 2rem;
+      font-size: 0.8rem;
+    }
+  }
+}
