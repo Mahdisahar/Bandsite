@@ -1,80 +1,79 @@
 @use './variables' as *;
-* {
-	font-family: 'Avenir', sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  }
 
+* {
+  font-family: 'Avenir', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 @mixin tablet {
-	@media (min-width: $tablet-breakpoint) {
-		@content;
-	}
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
 }
 
 @mixin desktop {
-	@media (min-width: $desktop-breakpoint) {
-		@content;
-	}
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
 }
 
-
 .nav {
-	background-color: $primary-color;
-	padding: $mob-padding 0;
-  
-	&__container {
-	  text-align: center;
-  
-	  @include tablet {
-		display: flex;
-		align-items: center;
-		padding: 1rem 0;
-	  }
-	  @include desktop {
-		padding: 1rem 4rem;
-	  }
-	}
-	&__logo {
-	  color: $primary-color-white;
-	  text-decoration: none;
-	  font-size: 1.9rem;
-	  font-weight: 400;
-	  letter-spacing: 2px;
-  
-	  @include tablet {
-		font-size: $header-size;
-		margin-left: 2rem;
-		line-height: $header-height;
-	  }
-	}
-	&__list {
-	  display: flex;
-	  list-style: none;
-	  justify-content: space-around;
-	  padding-top: $padding-after;
-  
-	  @include tablet {
-		padding-left: 4rem;
-		padding-top: 0;
-	  }
-	}
-	.nav__list-item {
-		color: $primary-color-white;
-		text-decoration: none;
+  background-color: $primary-color;
+  padding: $mob-padding 0;
 
-		&:hover {
-		  border-bottom: 4px solid $primary-color-white;
-		}
-  
-		@include tablet {
-		  margin-left: 4rem;
-		  font-size: $section-size;
-		}
-	
-	  }
+  &__container {
+    text-align: center;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    @include desktop {
+      padding: 1rem 4rem;
+    }
   }
+  &__logo {
+    color: $primary-color-white;
+    text-decoration: none;
+    font-size: $subheader-size;
+    font-weight: $body-weight;
+    letter-spacing: 2.5px;
+
+    @include tablet {
+      margin-left: 2rem;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-top: $padding-after;
+
+    @include tablet {
+      padding: 0 0 0 1.5rem;
+    }
+  }
+  .nav__list-item {
+    color: $primary-color-white;
+    text-decoration: none;
+    padding: 14px 50px;
+
+    @include tablet {
+      padding: 35px 10px;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $primary-color-white;
+    }
+
+    @include tablet {
+      margin-left: 3rem;
+    }
+  }
+}
