@@ -2,8 +2,6 @@
 @use './partial/variables' as *;
 @use './partial/global' as *;
 
-@use './partial/media' as *;
-
 
 // HERO SECTION
 .hero {
@@ -43,7 +41,7 @@
 
 //  MUSICIANS SECTION
 .musicians {
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0.2rem;
 
   &--title {
     padding-left: $mob-padding;
@@ -66,8 +64,8 @@
 
     &--img {
       padding: $mob-padding;
-      width: 20rem;
-      height: 10rem;
+	width: 100%;
+	height: 50%;
 	  transition: transform 1s ease-in-out ;
 	  &:hover {
 		transform: scale(1.05);
@@ -89,9 +87,10 @@
     padding-left: $mob-padding;
     color: $primary-color;
     line-height: $section-height;
+	width: 100%;
 
     @include tablet {
-      width: 45rem;
+     width: 45rem;
       text-align: left;
       font-size: $section-size;
       line-height: $section-height;
@@ -191,8 +190,8 @@
 	}
 	
     &--photo {
-      width: 20rem;
-      height: 10rem;
+	width: 100%;
+	height: 30%;
 	  padding: 0.5rem 1rem;
 	  transition: transform 1s ease-in-out ;
 		&:hover {
@@ -200,12 +199,12 @@
 		}
 
 	  @include tablet {
-		width: 15rem;
+		height: 100%;
 		padding: 1rem 0.5rem;
 	  }
 	  @include desktop {
-		width: 25rem;
-		height: 15rem;
+		// width: 25rem;
+		// height: 15rem;
 	  }
 
     }
