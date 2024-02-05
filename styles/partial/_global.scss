@@ -22,6 +22,14 @@ $desktop-breakpoint: 1280px;
   }
 }
 
+@mixin decoration {
+	text-decoration: none;
+	list-style: none;
+}
+@mixin flex {
+	display: flex;
+}
+
 .nav {
   background-color: $primary-color;
   padding: $mob-padding 0;
@@ -30,42 +38,41 @@ $desktop-breakpoint: 1280px;
     text-align: center;
 
     @include tablet {
-      display: flex;
+		@include flex;
       align-items: center;
-      padding: 1rem 0;
+      padding: $secondary-padding;
     }
     @include desktop {
-      padding: 1rem 4rem;
+      padding: $primary-padding;
     }
   }
   &__logo {
     color: $primary-color-white;
-    text-decoration: none;
+	@include decoration;
     font-size: $subheader-size;
-    font-weight: $body-weight;
     letter-spacing: 2.5px;
 
     @include tablet {
-      margin-left: 2rem;
+      margin-left:$primary-margin;
     }
   }
   &__list {
-    display: flex;
-    list-style: none;
+   @include flex;
+	@include decoration;
     justify-content: space-around;
     padding-top: $padding-after;
 
     @include tablet {
-      padding: 0 0 0 1.5rem;
+      padding: $padding-between;
     }
   }
   .nav__list-item {
     color: $primary-color-white;
-    text-decoration: none;
-    padding: 14px 50px;
+	@include decoration;
+    padding: $important-padding;
 
     @include tablet {
-      padding: 35px 10px;
+      padding: $item-padding;
     }
 
     &:hover {
@@ -73,7 +80,7 @@ $desktop-breakpoint: 1280px;
     }
 
     @include tablet {
-      margin-left: 3rem;
+      margin-left:$secondary-margin ;
     }
   }
 }
@@ -81,26 +88,27 @@ $desktop-breakpoint: 1280px;
 // FOOTER SECTION
 .footer {
   color: $primary-color-white;
-  margin-top: 0.5rem;
+  margin-top:$footer-margin;
   padding: 2.5rem 1rem;
   background-color: $primary-color;
+
   @include desktop {
-	padding: 2.5rem 5rem;
+	padding: $desktop-padding;
   }
 
   &__manage {
     @include tablet {
-      display: flex;
+      @include flex;
     }
   }
 
   &__touch {
     @include tablet {
-      display: flex;
+		@include flex;
     }
 
     &--title {
-      padding-bottom: 1rem;
+    padding-bottom: 1rem;
       font-size: $section-size;
 
       @include tablet {
@@ -109,7 +117,7 @@ $desktop-breakpoint: 1280px;
       }
     }
     &--img {
-      padding-right: 2rem;
+      padding-right: $padding-tablet;
       @include tablet {
         padding-top: 1rem;
       }
@@ -117,7 +125,7 @@ $desktop-breakpoint: 1280px;
   }
 
   &__address {
-    padding: 1rem 0;
+    padding: $secondary-padding;
 
     @include tablet {
       width: 100%;
@@ -143,7 +151,7 @@ $desktop-breakpoint: 1280px;
 	position: relative;
 	&--img {
 		@include tablet {
-			display: flex;
+			@include flex;
 			flex-direction:row-reverse;
 			position: absolute;
 			bottom: 17.5rem;
@@ -152,10 +160,9 @@ $desktop-breakpoint: 1280px;
 		}
 	}
  
-
     &--para1 {
       padding-top: 2rem;
-      font-size: 0.8rem;
+      font-size: $body-mob-size;
     }
   }
 }

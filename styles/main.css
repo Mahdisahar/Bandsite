@@ -39,8 +39,8 @@
 .nav__logo {
   color: #FFFFFF;
   text-decoration: none;
+  list-style: none;
   font-size: 1.6rem;
-  font-weight: 400;
   letter-spacing: 2.5px;
 }
 @media (min-width: 768px) {
@@ -50,6 +50,7 @@
 }
 .nav__list {
   display: flex;
+  text-decoration: none;
   list-style: none;
   justify-content: space-around;
   padding-top: 1.5rem;
@@ -62,6 +63,7 @@
 .nav .nav__list-item {
   color: #FFFFFF;
   text-decoration: none;
+  list-style: none;
   padding: 14px 50px;
 }
 @media (min-width: 768px) {
@@ -155,6 +157,11 @@
   font-size: 0.8rem;
 }
 
+@media (min-width: 375px) {
+  .musicians__container--img {
+    width: 50rem;
+  }
+}
 .hero {
   min-height: 15rem;
   background-image: linear-gradient(rgba(1, 1, 2, 0.7), rgba(71, 66, 66, 0.5)), url(../assets/images/hero-bio.jpg);

@@ -2,6 +2,9 @@
 @use './partial/variables' as *;
 @use './partial/global' as *;
 
+@use './partial/media' as *;
+
+
 // HERO SECTION
 .hero {
   min-height: 15rem;
@@ -43,7 +46,7 @@
   padding: 1.5rem 0 1rem 0;
 
   &--title {
-    padding-left: 1rem;
+    padding-left: $mob-padding;
     color: $primary-color;
 
     @include tablet {
@@ -62,7 +65,7 @@
     }
 
     &--img {
-      padding: 1rem;
+      padding: $mob-padding;
       width: 20rem;
       height: 10rem;
 	  transition: transform 1s ease-in-out ;
@@ -83,7 +86,7 @@
 
   .musicians--para,
   .musicians--para2 {
-    padding-left: 1rem;
+    padding-left: $mob-padding;
     color: $primary-color;
     line-height: $section-height;
 
@@ -101,7 +104,7 @@
   }
   .musicians--para2 {
     @include tablet {
-      padding-top: 2rem;
+      padding-top: $padding-tablet;
     font-size: 1.2rem;
     }
   }
@@ -109,7 +112,7 @@
 
 // THE BEE KNEES SECTION
 .bee {
-  padding: 1rem;
+  padding: $mob-padding;
   min-height: 20rem;
 
   &__title {
@@ -131,7 +134,7 @@
   &__list {
     list-style: none;
     @include tablet {
-      display: flex;
+      @include flex;
       padding: 0 4rem;
       line-height: 1.6rem;
     }
@@ -142,10 +145,10 @@
     }
 
     &--item {
-      padding-bottom: 1rem;
+      padding-bottom:$mob-padding;
       color: $primary-color;
-
       margin: 0 auto;
+
       @include tablet {
         width: 25rem;
       }
@@ -159,7 +162,7 @@
 
   &__container {
 	@include tablet {
-		padding: 1.5rem;
+		padding: $padding-after;
 	}
 	@include desktop {
 		padding: 0;
@@ -184,7 +187,7 @@
 		
 	}
 	@include desktop {
-		padding: 2rem;
+		padding: $padding-tablet;
 	}
 	
     &--photo {
