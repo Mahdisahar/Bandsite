@@ -95,8 +95,40 @@ $desktop-breakpoint: 1280px;
   @include desktop {
 	padding: $desktop-padding;
   }
+  &__para2,
+  &__email {
+	font-size: $body-mob-size;
+	padding-bottom: 1rem
+  }
+  &__title,
+  &__para1 {
+	font-size: 1rem;
+	padding-bottom: 1rem;
+  }
+  &__title,
+    &__para1 {
+      font-size: 1rem;
+	  padding-bottom: 1rem;
+    }
+&__para2 {
+		padding-bottom : 2em;
+	}
+	
 
   &__manage {
+	
+	// &__title,
+    // &__para1 {
+    //   font-size: 1rem;
+	//   padding-bottom: 1rem;
+    // }
+
+    // &__para2,
+    // &__email {
+    //   font-size: $body-mob-size;
+	//   padding-bottom: 1rem
+    // }
+
     @include tablet {
       @include flex;
     }
@@ -105,9 +137,10 @@ $desktop-breakpoint: 1280px;
   &__touch {
     @include tablet {
 		@include flex;
-    }
+    } 
+  }
 
-    &--title {
+  &__title {
     padding-bottom: 1rem;
       font-size: $section-size;
 
@@ -116,16 +149,15 @@ $desktop-breakpoint: 1280px;
         font-size: $header-size;
       }
     }
-    &--img {
+    &__img {
       padding-right: $padding-tablet;
       @include tablet {
         padding-top: 1rem;
       }
     }
-  }
 
   &__address {
-    padding: $secondary-padding;
+	padding: 1rem 0 0 0;
 
     @include tablet {
       width: 100%;
@@ -133,36 +165,39 @@ $desktop-breakpoint: 1280px;
 	@include desktop {
 		width: 25%;
 	  }
-
-    &--title,
-    &--para2 {
-      font-size: 1rem;
-      padding-bottom: $padding-after;
-    }
-
-    &--para2,
-    &--email {
-      font-size: $body-mob-size;
-    }
+ &--title {
+	padding-bottom: 1.5rem;
+ }
+    
+  }
+  &__para1 {
+	 padding-bottom: 0.5rem;
+	 font-size: 1rem;
   }
 
   &__band {
     padding: 2rem 0 0 0;
 	position: relative;
+
+	@include tablet {
+		padding: 0;
+	}
+
 	&--img {
+
 		@include tablet {
 			@include flex;
 			flex-direction:row-reverse;
 			position: absolute;
-			bottom: 17.5rem;
-			right: 2rem;
-	 
+			bottom: 15rem;
+			right: 2rem;	
+	
 		}
-	}
- 
-    &--para1 {
-      padding-top: 2rem;
+	}  &--para1 {
       font-size: $body-mob-size;
+	  padding-top: 1rem;
     }
+
   }
+
 }

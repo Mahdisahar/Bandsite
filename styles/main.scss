@@ -2,14 +2,10 @@
 @use './partial/variables' as *;
 @use './partial/global' as *;
 
-
 // HERO SECTION
 .hero {
   min-height: 15rem;
-  background-image: linear-gradient(
-      rgba(1, 1, 2, 0.7),
-      rgba(71, 66, 66, 0.5)
-    ),
+  background-image: linear-gradient(rgba(1, 1, 2, 0.7), rgba(71, 66, 66, 0.5)),
     url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
@@ -52,9 +48,9 @@
       padding: 2rem;
     }
 
-	@include desktop{
-		padding-left: 5rem;
-	  }
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 
   &__container {
@@ -64,12 +60,12 @@
 
     &--img {
       padding: $mob-padding;
-	width: 100%;
-	height: 50%;
-	  transition: transform 1s ease-in-out ;
-	  &:hover {
-		transform: scale(1.05);
-	  }
+      width: 100%;
+      height: 50%;
+      transition: transform 1s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
 
       @include tablet {
         width: 40rem;
@@ -87,10 +83,10 @@
     padding-left: $mob-padding;
     color: $primary-color;
     line-height: $section-height;
-	width: 100%;
+    width: 100%;
 
     @include tablet {
-     width: 45rem;
+      width: 45rem;
       text-align: left;
       font-size: $section-size;
       line-height: $section-height;
@@ -104,7 +100,7 @@
   .musicians--para2 {
     @include tablet {
       padding-top: $padding-tablet;
-    font-size: 1.2rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -144,7 +140,7 @@
     }
 
     &--item {
-      padding-bottom:$mob-padding;
+      padding-bottom: $mob-padding;
       color: $primary-color;
       margin: 0 auto;
 
@@ -160,12 +156,12 @@
   background-color: $secondary-color-albaster;
 
   &__container {
-	@include tablet {
-		padding: $padding-after;
-	}
-	@include desktop {
-		padding: 0;
-	}
+    @include tablet {
+      padding: $padding-after;
+    }
+    @include desktop {
+      padding: 0;
+    }
   }
   &__title {
     color: $primary-color;
@@ -173,40 +169,38 @@
     padding: 2rem 0 0 1rem;
 
     @include tablet {
-    font-size:$header-size ;
+      font-size: $header-size;
     }
-	@include desktop{
-		padding-left: 3rem;
-	  }
+    @include desktop {
+      padding-left: 3rem;
+    }
   }
   &__img {
     @include tablet {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		
-	}
-	@include desktop {
-		padding: $padding-tablet;
-	}
-	
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop {
+      padding: $padding-tablet;
+    }
+
     &--photo {
-	width: 100%;
-	height: 30%;
-	  padding: 0.5rem 1rem;
-	  transition: transform 1s ease-in-out ;
-		&:hover {
-		  transform: scale(1.05);
-		}
+      width: 100%;
+      height: 30%;
+      padding: 0.5rem 1rem;
+      transition: transform 1s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
 
-	  @include tablet {
-		height: 100%;
-		padding: 1rem 0.5rem;
-	  }
-	  @include desktop {
-		// width: 25rem;
-		// height: 15rem;
-	  }
-
+      @include tablet {
+        height: 100%;
+        padding: 1rem 0.5rem;
+      }
+      @include desktop {
+        // width: 25rem;
+        // height: 15rem;
+      }
     }
   }
 }
@@ -214,68 +208,101 @@
 // FORM SECTION
 
 .conversation {
-	padding:2rem 1rem;
+  padding: 2rem 1rem 0 1rem;
+  font-family: 'Avenir', sans-serif;
 
-	&__title {
-color:$primary-color;
-	font-size:$subheader-size ;
+  &__title {
+    color: $primary-color;
+    font-size: $subheader-size;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__container {
+      padding: 2rem 0 0 3rem;
+    }
+    &__name,
+    &__comment {
+      color: $primary-color-silver;
+    }
+
+    &__input,
+    &__text {
+      width: 100%;
+      height: 3rem;
+      border: 1px solid $primary-color-silver;
+      border-radius: 8px;
+      margin: 0.5rem 0 1rem 0;
+      padding-left: 1rem;
+      font-size: 1rem;
+      background-color: $secondary-color-albaster;
+    }
+
+    &__text {
+      height: 10rem;
+      padding-top: 1rem;
+    }
+    .btn {
+      background-color: $primary-color;
+      color: $primary-color-white;
+      padding: $secondary-padding;
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .shape {
+      width: 3rem;
+      height: 3rem;
+      background-color: $primary-color-silver;
+      border-radius: 50%;
+      position: absolute;
+      top: 3.5rem;
+      left: -0.5rem;
+    }
+  }
+  .comment__container {
+    margin: 2rem 0;
+  }
+  .comment__list {
+    list-style: none;
+  }
+  .comment__item {
+    border-top: 2px solid $primary-color-silver;
+    padding-top: 1rem;
+    position: relative;
+
+    &--shape {
+      width: 3rem;
+      height: 3rem;
+      background-color: $primary-color-silver;
+      border-radius: 50%;
+      position: absolute;
+      top: 1rem;
+    }
+  }
+  .comment__first {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0 0 4rem;
+
+    &--time {
+      color: $primary-color-silver;
+    }
+
+    &--h {
+      font-size: 1rem;
+      color: $primary-color;
+    }
+  }
+
+  .comment__second {
+    padding: 1rem 0 1rem 4rem;
+    font-size: 1rem;
+    color: $primary-color;
+	// border-bottom: 2px solid $primary-color-silver;
 	
-
-	}
-	.form {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-
-		&__container {
-            padding:2rem 0 0 3rem;
- 
-		}
-	 
-		  &__name, &__comment {
-				color:$primary-color-silver;
-			}
-
-		&__title , &__text {
-			width: 100%;
-			height: 3rem;
-			border: 1px solid $primary-color-silver;
-			border-radius: 8px;
-			margin-top: 0.5rem;
-			margin-bottom: 1.5rem;
-			padding-left: 1rem;
-			font-size: 1rem;
-			background-color: $secondary-color-albaster ;
-		
-		} 
-
-		&__text {
-			height: 10rem ;
-			padding-top: 1rem;
-		}
-		.btn {
-			background-color: $primary-color;
-			color:$primary-color-white ;
-			padding: $secondary-padding;
-			border: 1px solid $primary-color;
-			border-radius: 8px;
-			margin-top: 1.5rem;
-			font-size: $section-size;
-			width: 100%;
-		}
-		.shape {
-			width: 3rem;
-			height: 3rem;
-			background-color:$primary-color;
-			border-radius: 50%;
-			 position: absolute;
-			top: 3.5rem;
-			left: -0.5rem;
-
-		}
-	}
-
-	
+  }
 }
-
-
