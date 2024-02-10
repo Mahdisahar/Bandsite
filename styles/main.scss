@@ -197,10 +197,6 @@
         height: 100%;
         padding: 1rem 0.5rem;
       }
-      @include desktop {
-        // width: 25rem;
-        // height: 15rem;
-      }
     }
   }
 }
@@ -209,16 +205,32 @@
 
 .conversation {
   padding: 2rem 1rem 0 1rem;
-  font-family: 'Avenir', sans-serif;
 
   &__title {
     color: $primary-color;
     font-size: $subheader-size;
+
+	@include tablet {
+		font-size: $header-size;
+		margin-left: 2rem;
+	}
+	@include desktop {
+		margin-left: 5rem;
+	  }
   }
   .form {
     display: flex;
     flex-direction: column;
     position: relative;
+
+	@include desktop {
+		width: 65%;
+		margin: 0 auto;
+	  }
+
+	@include tablet {
+		padding: 2rem 5rem 0 5rem;
+			  }
 
     &__container {
       padding: 2rem 0 0 3rem;
@@ -226,6 +238,7 @@
     &__name,
     &__comment {
       color: $primary-color-silver;
+	  font-size: 0.9rem;
     }
 
     &__input,
@@ -238,6 +251,10 @@
       padding-left: 1rem;
       font-size: 1rem;
       background-color: $secondary-color-albaster;
+
+	  @include tablet {
+		height: 4rem;
+	  }
     }
 
     &__text {
@@ -251,9 +268,15 @@
       border: 1px solid $primary-color;
       border-radius: 8px;
       font-size: 1rem;
-      width: 100%;
+     width: 100%;
+
+	  @include tablet {
+	width: 40%;
+	float: right;	
+			  }		  
     }
-    .shape {
+
+    .shape, .avatar {
       width: 3rem;
       height: 3rem;
       background-color: $primary-color-silver;
@@ -261,17 +284,33 @@
       position: absolute;
       top: 3.5rem;
       left: -0.5rem;
+
+	  @include tablet {
+		left: 4rem;
+		top: 5.5rem;
+			  }
     }
   }
   .comment__container {
     margin: 2rem 0;
+
+	@include tablet {
+		padding: 0 5rem;
+		  }
+		  @include desktop {
+			width: 65%;
+			margin: 0 auto;
+			padding: 2rem 5rem;
+		  }
+
   }
   .comment__list {
     list-style: none;
   }
   .comment__item {
-    border-top: 2px solid $primary-color-silver;
-    padding-top: 1rem;
+    border-top: 1px solid $primary-color-silver;
+	border-bottom: 1px solid $primary-color-silver;
+	padding: 1rem 0;
     position: relative;
 
     &--shape {
@@ -302,7 +341,6 @@
     padding: 1rem 0 1rem 4rem;
     font-size: 1rem;
     color: $primary-color;
-	// border-bottom: 2px solid $primary-color-silver;
-	
   }
+
 }

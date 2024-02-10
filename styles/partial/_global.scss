@@ -70,19 +70,24 @@ $desktop-breakpoint: 1280px;
     color: $primary-color-white;
 	@include decoration;
     padding: $important-padding;
+	
 
     @include tablet {
       padding: $item-padding;
     }
 
-    &:hover {
-      border-bottom: 3px solid $primary-color-white;
-    }
+    // &:hover {
+    //   border-bottom: 3px solid $primary-color-white;
+    // }
 
     @include tablet {
       margin-left:$secondary-margin ;
     }
   }
+
+  .active {
+	border-bottom: 3px solid $primary-color-white;
+}
 }
 
 // FOOTER SECTION
