@@ -71,22 +71,14 @@ $desktop-breakpoint: 1280px;
 	@include decoration;
     padding: $important-padding;
 	
-
     @include tablet {
       padding: $item-padding;
-    }
-
-    // &:hover {
-    //   border-bottom: 3px solid $primary-color-white;
-    // }
-
-    @include tablet {
       margin-left:$secondary-margin ;
     }
   }
 
   .active {
-	border-bottom: 3px solid $primary-color-white;
+	border-bottom: 4px solid $primary-color-white;
 }
 }
 

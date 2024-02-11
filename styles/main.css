@@ -68,16 +68,12 @@
 }
 @media (min-width: 768px) {
   .nav .nav__list-item {
-    padding: 35px 10px;
-  }
-}
-@media (min-width: 768px) {
-  .nav .nav__list-item {
+    padding: 36px 5px;
     margin-left: 3rem;
   }
 }
 .nav .active {
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
 }
 
 .footer {
