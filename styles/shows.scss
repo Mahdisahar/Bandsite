@@ -4,23 +4,31 @@
 
 // ALBUM SECTION
 .album {
-	min-height: 18rem;
-	background: linear-gradient(rgba(0, 1, 1, 0.3), rgba(0, 0, 0, 0.8)),
-		url('../assets/Images/hero-shows.jpg');
-	  background-position: center;
-	  background-size: cover;
+  min-height: 18rem;
+  background: linear-gradient(rgba(85, 85, 85, 0.5), rgba(0, 0, 0, 0.8)),
+    url('../assets/Images/hero-shows.jpg');
+  background-position: center;
+  background-size: cover;
 
-	  @include tablet {
-		min-height: 30rem;
-	  }
+  @include tablet {
+    min-height: 30rem;
+  }
+  @include desktop {
+    min-height: 60rem;
+  }
 
   &__container {
     color: $primary-color-white;
     padding: 1.5rem 1.3rem;
 
-	@include tablet {
-		padding:4rem 3rem
-	  }
+    @include tablet {
+      padding: 4rem 3rem;
+    }
+
+	@include desktop {
+		@include flex; 
+	  padding:20rem 3rem;
+	}
   }
 
   &__title {
@@ -30,115 +38,129 @@
     padding-bottom: 1rem;
     font-size: 1.2rem;
 
-@include tablet {
-	font-size: $subheader-size ;
-}
+    @include tablet {
+      font-size: $subheader-size;
+    }
   }
   &__header {
     font-size: $subheader-size;
 
-	@include tablet {
-		font-size: 3.8rem;
-	}
+    @include tablet {
+      font-size: 3.8rem;
+    }
   }
   &__ifram {
     width: 17rem;
     height: 6rem;
 
-	@include tablet {
-		width: 25rem;
-		height: 8rem;
-	}
+    @include tablet {
+      width: 25rem;
+      height: 8rem;
+    }
+	@include desktop {
+		width: 45rem;
+		height: 10rem;
+	  }
   }
 }
 
 // SHOWS SECTION
 
 .shows {
-	@include desktop {
-		margin: 2rem 4rem;
-	}
-  &__header {
-    padding-bottom: 1.5rem;
-    padding: 2rem 1.5rem;
-
-	@include tablet {
-		font-size: $header-size; 
-		margin-left: 2rem;
-	}
-	@include desktop {
-		font-size: 3rem; 
-		margin: 3rem 0 0 3rem;
-		padding: 0;
-	}
-  }
-
-  &__container {
-    padding: 0 1.5rem;
-    border-bottom: 1px solid $primary-color-silver;
-	padding-bottom: 1rem;
-	margin-bottom: 1rem;
-
-	@include tablet {
+	&__co {
+	  @include desktop {
 		display: flex;
-		justify-content: space-between;	
-		margin: 0 2rem;	
+		margin-top: 3rem;
+		flex-direction: column;
+		justify-content: space-between;
+	  }
 	}
+  
+	&__header {
+	  padding-bottom: 1.5rem;
+	  padding: 2rem 1.5rem;
+	  color: $primary-color;
+  
+	  @include tablet {
+		font-size: $header-size;
+		margin-left: 1.3rem;
+		padding-top: 4rem;
+	  }
+	}
+  
+	&__container {
+	  padding: 0 1.5rem;
+	  border-bottom: 1px solid $primary-color-silver;
+	  padding-bottom: 1rem;
 
-	@include desktop {
+	  @include tablet {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin:0 0 3rem 2rem;
+	  }
+
+   @include desktop {
 		width: 70%;
-		margin: 0 auto;
-		
+		margin: 2rem auto;
+	  }
+	  }
+  
+	&__detail {
+	  padding: 0.5rem 0;
+  
+	  @include desktop {
+		margin-right: 0.5rem;
+	  }
 	}
-  }
-
-  &__detail {
-	padding:0.5rem 0;
-
-	// @include desktop {
-	// 	margin-right:  2rem;
-	// }
-  }
-
+  
 	&__para {
-	color: $primary-color-silver;
-	font-size: $body-size;
-	padding-bottom: 0.3rem;
+	  color: $primary-color-silver;
+	  font-size: 1rem;
+	  padding-bottom: 0.3rem;
 
-	@include tablet {
-		padding-bottom: 1rem;	
-	}
-
-	@include desktop {
-		font-size: 1.2rem ;
-	} 
+	  @include tablet {
+		padding-bottom: 2rem;
+	  }
+	
+  
+	  &--no {
+		  @include tablet {
+			  display: none;
+	  }
+  }
+  
+	  @include desktop {
+		font-size: 1rem;
+	  }
 	}
 
 	&__para2 {
-		font-size:$footer-height ;
-		color: $primary-color;
+	  font-size: $footer-height;
+	  color: $primary-color;
+  
+	  @include desktop {
+		font-size: 1.3rem;
+	  }
 	}
-
+  
 	.btn {
-		margin-top: 1rem;
-		background-color: $primary-color;
-		color: $primary-color-white;
-		padding: 0.5rem;
-		border: 1px solid $primary-color;
-		border-radius: 4px;
-		font-size: 1rem;
-	   width: 100%; 
-
-	   @include tablet {
+	  margin-top: 1rem;
+	  background-color: $primary-color;
+	  color: $primary-color-white;
+	  padding: 0.5rem;
+	  border: 1px solid $primary-color;
+	  border-radius: 4px;
+	  font-size: 1rem;
+	  width: 100%;
+  
+	  @include tablet {
 		width: 20%;
+	    padding: 0.7rem;
+	  }
+  
+	  @include desktop {
+			padding: 1rem;
+	  }
 	}
-
-	@include desktop {
-		// width: 40%;
-	}
-	}
- 
 }
-
- 
-

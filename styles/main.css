@@ -164,8 +164,13 @@
     display: flex;
     flex-direction: row-reverse;
     position: absolute;
-    bottom: 15rem;
+    bottom: 16rem;
     right: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__band--img {
+    bottom: 15rem;
   }
 }
 .footer__band--para1 {

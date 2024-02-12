@@ -113,18 +113,6 @@ $desktop-breakpoint: 1280px;
 	
 
   &__manage {
-	
-	// &__title,
-    // &__para1 {
-    //   font-size: 1rem;
-	//   padding-bottom: 1rem;
-    // }
-
-    // &__para2,
-    // &__email {
-    //   font-size: $body-mob-size;
-	//   padding-bottom: 1rem
-    // }
 
     @include tablet {
       @include flex;
@@ -186,10 +174,14 @@ $desktop-breakpoint: 1280px;
 			@include flex;
 			flex-direction:row-reverse;
 			position: absolute;
-			bottom: 15rem;
-			right: 2rem;	
-	
+			bottom: 16rem;
+			right: 2rem;		
 		}
+
+		@include desktop() {
+			bottom: 15rem;	
+		}
+
 	}  &--para1 {
       font-size: $body-mob-size;
 	  padding-top: 1rem;
