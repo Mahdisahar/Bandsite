@@ -136,6 +136,7 @@
 @media (min-width: 768px) {
   .footer__address {
     width: 100%;
+
   }
 }
 @media (min-width: 1280px) {
@@ -445,6 +446,7 @@
   padding-left: 1rem;
   font-size: 1rem;
   background-color: #FAFAFA;
+  resize: none;
 }
 @media (min-width: 768px) {
   .conversation .form__input, .conversation .form__text {
