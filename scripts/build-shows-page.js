@@ -1,43 +1,4 @@
 
-// const shows = [
-//     {
-//         date: 'Mon Sept 09 2024',
-//         name: 'Roland Lane',
-//         location:'San Francisco, CA',
-//         btn:  'BUY TICKET'
-//     },
-//     {
-//         date:'Tue Sept 17 2024',
-//         name: 'Pier 3 East',
-//         location: 'San Francisco, CA',
-//         btn: 'BUY TICKET'
-//     },
-//     {
-//         date:'Sat Oct 12 2024',
-//         name: 'View Lounge',
-//         location: 'San Francisco, CA',
-//         btn:  'BUY TICKET'
-//     },
-//     {
-//         date:'Sat Nov 16 2024',
-//         name: 'Hyatt Agency',
-//         location: 'San Francisco, CA',
-//         btn:  'BUY TICKET'
-//     },
-//     {
-//         date:'Fri Nov 29 2024',
-//         name: 'Moscow Center',
-//         location: 'San Francisco, CA',
-//         btn: 'BUY TICKET'
-//     },
-//     {     
-//         date:'Wed Dec 18 2024',
-//         name: 'Press Club',
-//         location: 'San Francisco, CA',
-//         btn: 'BUY TICKET'
-//     }
-// ];
-
 // import the bandSite JS file.
 import BandSiteApi from './band-site-api.js';
 
